@@ -1,0 +1,356 @@
+/* XEDIC Camera - Order Success Page Styles */
+
+:root {
+    --primary-color: #1C1C1C;
+    --secondary-color: #F5F5F5;
+    --text-color: #1C1C1C;
+    --accent-color: #FF5733;
+    --light-gray: #E8E8E8;
+    --dark-gray: #4A4A4A;
+    --white: #FFFFFF;
+    --success: #10B981;
+    --danger: #EF4444;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ============== ORDER SUCCESS PAGE ============== */
+.order-success-page {
+    background: linear-gradient(135deg, #F5F5F5 0%, #FFFFFF 100%);
+    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.success-container {
+    background: white;
+    padding: 60px 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid #E8E8E8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ============== SUCCESS ICON ============== */
+.success-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--success), #06B6D4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    box-shadow: var(--shadow-lg);
+    animation: successPulse 0.6s ease;
+}
+
+.success-icon i {
+    font-size: 3.5rem;
+    color: white;
+}
+
+@keyframes successPulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ============== SUCCESS MESSAGE ============== */
+.success-container h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.success-message {
+    font-size: 1.05rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* ============== ORDER INFO ============== */
+.order-info {
+    background: linear-gradient(135deg, white 0%, #F5F5F5 100%);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    border: 1px solid #E8E8E8;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.info-value {
+    color: var(--accent-color);
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+
+.info-value .badge {
+    font-weight: 700;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+}
+
+/* ============== NEXT STEPS ============== */
+.next-steps {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), transparent);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid var(--success);
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.next-steps h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    margin-left: 0;
+}
+
+.next-steps ol {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.next-steps li {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.next-steps li:last-child {
+    margin-bottom: 0;
+}
+
+/* ============== ACTION BUTTONS ============== */
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.btn-primary-custom,
+.btn-secondary-custom {
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+}
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #6A5735 100%);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    color: white;
+}
+
+.btn-secondary-custom {
+    background: white;
+    color: var(--primary-color);
+    border: 2.5px solid var(--primary-color);
+}
+
+.btn-secondary-custom:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ============== SUPPORT INFO ============== */
+.support-info {
+    background: linear-gradient(135deg, #FF5733, #FF7652);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #FF5733;
+}
+
+.support-info h4 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.support-info p {
+    margin-bottom: 0;
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.support-info a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.support-info a:hover {
+    text-decoration: underline;
+}
+
+.support-info strong {
+    color: var(--accent-color);
+    font-weight: 900;
+}
+
+/* ============== RESPONSIVE ============== */
+@media (max-width: 768px) {
+    .success-container {
+        padding: 40px 25px;
+        margin: 20px;
+    }
+
+    .success-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 25px;
+    }
+
+    .success-icon i {
+        font-size: 3rem;
+    }
+
+    .success-container h1 {
+        font-size: 1.6rem;
+    }
+
+    .success-message {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .order-info {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .order-success-page {
+        padding: 40px 0;
+    }
+
+    .success-container {
+        padding: 30px 20px;
+        margin: 15px;
+        border-radius: 12px;
+    }
+
+    .success-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .success-icon i {
+        font-size: 2.5rem;
+    }
+
+    .success-container h1 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+
+    .success-message {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+
+    .order-info {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .info-label {
+        margin-bottom: 5px;
+    }
+
+    .next-steps {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .next-steps h3 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+
+    .btn-primary-custom,
+    .btn-secondary-custom {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    .support-info {
+        padding: 15px;
+    }
+
+    .support-info h4 {
+        font-size: 0.95rem;
+    }
+
+    .support-info p {
+        font-size: 0.85rem;
+    }
+}

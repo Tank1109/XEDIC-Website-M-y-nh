@@ -1,0 +1,652 @@
+/* XEDIC Camera - Transfer Payment Page Styles */
+
+:root {
+    --primary-color: #1C1C1C;
+    --secondary-color: #F5F5F5;
+    --text-color: #1C1C1C;
+    --accent-color: #FF5733;
+    --light-gray: #E8E8E8;
+    --dark-gray: #4A4A4A;
+    --white: #FFFFFF;
+    --success: #10B981;
+    --danger: #EF4444;
+    --warning: #F59E0B;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ============== TRANSFER PAYMENT PAGE ============== */
+.transfer-payment-page {
+    background: linear-gradient(135deg, #F5F5F5 0%, #FFFFFF 100%);
+    padding: 50px 0;
+    min-height: 100vh;
+}
+
+/* ============== HEADER ============== */
+.transfer-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2d2d2d 100%);
+    border-radius: 12px;
+    color: white;
+    box-shadow: var(--shadow-lg);
+}
+
+.transfer-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.transfer-header h1 i {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.transfer-header p {
+    font-size: 1rem;
+    color: #D4D4D4;
+    margin: 0;
+}
+
+/* ============== TRANSFER CONTAINER ============== */
+.transfer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ============== BANK INFO CARD ============== */
+.bank-info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 2px solid #E8E8E8;
+}
+
+.bank-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.bank-header i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+}
+
+.bank-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+/* ============== QR CODE CONTAINER ============== */
+.qr-code-container {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, white 0%, #F5F5F5 100%);
+    border-radius: 10px;
+    border: 2px dashed #E8E8E8;
+}
+
+.qr-code {
+    margin-bottom: 15px;
+}
+
+.qr-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+}
+
+.qr-instruction {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.qr-instruction i {
+    color: var(--accent-color);
+}
+
+/* ============== ACCOUNT DETAILS ============== */
+.account-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: linear-gradient(135deg, white 0%, #F5F5F5 100%);
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+    gap: 12px;
+}
+
+.detail-item .label {
+    font-weight: 700;
+    color: var(--text-color);
+    min-width: 110px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-item .value {
+    flex: 1;
+    font-weight: 700;
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    word-break: break-all;
+    font-family: 'Courier New', monospace;
+}
+
+.detail-item .value.amount {
+    color: var(--success);
+    font-size: 1.1rem;
+}
+
+.btn-copy {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.btn-copy:hover {
+    background: #6A5735;
+    transform: scale(1.1);
+}
+
+.btn-copy.copied {
+    background: var(--success);
+}
+
+/* ============== COPY ALL BUTTON ============== */
+.btn-copy-all {
+    width: 100%;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, var(--accent-color) 0%, #6A5735 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 20px;
+}
+
+.btn-copy-all:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ============== TRANSFER STEPS ============== */
+.transfer-steps {
+    background: linear-gradient(135deg, rgba(139, 111, 71, 0.08), transparent);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.transfer-steps h4 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.transfer-steps ol {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.transfer-steps li {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.transfer-steps li:last-child {
+    margin-bottom: 0;
+}
+
+.transfer-steps strong {
+    color: var(--accent-color);
+    font-weight: 800;
+}
+
+/* ============== ORDER SUMMARY TRANSFER ============== */
+.order-summary-transfer {
+    background: linear-gradient(135deg, white 0%, #F5F5F5 100%);
+    padding: 30px;
+    border-radius: 12px;
+    position: sticky;
+    top: 80px;
+    border: 2px solid #E8E8E8;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-summary-transfer h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin: 0;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+/* ============== SUMMARY PRODUCTS TRANSFER ============== */
+.summary-products-transfer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summary-item-transfer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #E8E8E8;
+    gap: 10px;
+}
+
+.summary-item-transfer:last-child {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 15px;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.item-name {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    word-break: break-word;
+}
+
+.item-qty {
+    background: linear-gradient(135deg, #FF5733, #FF7652);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.item-price {
+    font-weight: 800;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+/* ============== DIVIDER ============== */
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, #E8E8E8 0%, transparent 100%);
+    margin: 0;
+}
+
+/* ============== PRICING SUMMARY ============== */
+.pricing-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.row-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.row-summary span:last-child {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.row-summary.total {
+    padding: 15px 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-color);
+    background: linear-gradient(90deg, transparent 0%, rgba(139, 111, 71, 0.06) 100%);
+    border-top: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.row-summary.total span:last-child {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+}
+
+/* ============== CONFIRMATION SECTION ============== */
+.confirmation-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #E8E8E8;
+}
+
+.confirmation-section h4 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+/* ============== CONFIRMATION STATUS ============== */
+.confirmation-status {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), transparent);
+    border-radius: 8px;
+    border-left: 4px solid var(--success);
+}
+
+.status-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.status-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.status-icon.pending {
+    background: linear-gradient(135deg, var(--warning), #FBBF24);
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.status-text strong {
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.status-text p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* ============== CONFIRMATION BUTTONS ============== */
+.confirmation-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.btn-confirm-transfer,
+.btn-change-method {
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+}
+
+.btn-confirm-transfer {
+    background: linear-gradient(135deg, var(--success), #059669);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-confirm-transfer:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-confirm-transfer:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.btn-change-method {
+    background: white;
+    color: var(--primary-color);
+    border: 2.5px solid var(--primary-color);
+}
+
+.btn-change-method:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ============== ALERTS ============== */
+.alert {
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), transparent);
+    color: var(--success);
+    border-left: 4px solid var(--success);
+    padding: 12px 15px;
+}
+
+.alert i {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.alert span {
+    flex: 1;
+}
+
+/* ============== TRANSFER INFO ============== */
+.transfer-info {
+    background: linear-gradient(135deg, #FF5733, #FF7652);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #FF5733;
+    display: flex;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.transfer-info i {
+    color: white;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.transfer-info strong {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+/* ============== RESPONSIVE ============== */
+@media (max-width: 768px) {
+    .transfer-header {
+        padding: 20px 15px;
+        margin-bottom: 30px;
+    }
+
+    .transfer-header h1 {
+        font-size: 1.8rem;
+        gap: 8px;
+    }
+
+    .transfer-header h1 i {
+        font-size: 2rem;
+    }
+
+    .bank-info-card {
+        padding: 20px;
+    }
+
+    .qr-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .order-summary-transfer {
+        position: static;
+        margin-top: 30px;
+    }
+
+    .confirmation-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .transfer-payment-page {
+        padding: 30px 0;
+    }
+
+    .transfer-header {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .transfer-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .bank-info-card {
+        padding: 15px;
+    }
+
+    .qr-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .detail-item .label {
+        min-width: auto;
+    }
+
+    .detail-item .value {
+        width: 100%;
+    }
+
+    .btn-copy {
+        align-self: flex-start;
+    }
+
+    .transfer-steps {
+        padding: 15px;
+    }
+
+    .transfer-steps h4 {
+        font-size: 0.9rem;
+    }
+
+    .transfer-steps ol {
+        padding-left: 18px;
+    }
+
+    .transfer-steps li {
+        font-size: 0.85rem;
+    }
+
+    .order-summary-transfer {
+        padding: 20px;
+    }
+
+    .btn-confirm-transfer,
+    .btn-change-method {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+    }
+
+    .transfer-info {
+        font-size: 0.8rem;
+        padding: 12px;
+    }
+}

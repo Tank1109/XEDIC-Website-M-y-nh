@@ -1,0 +1,61 @@
+/* contact.css - ĐỒNG BỘ TRANG CHỦ + GIỚI THIỆU */
+body {
+    background-color: #f8f9fa !important;
+    color: #212529;
+}
+
+.py-5 { padding: 3rem 0 !important; }
+.py-md-7 { padding: 5rem 0 !important; }
+
+.card {
+    border: none !important;
+    transition: all 0.3s ease;
+    border-radius: 16px;
+}
+.card:hover {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+    transform: translateY(-5px);
+}
+
+.form-control, .form-select {
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #212529;
+    box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.15);
+}
+
+.btn-outline-dark {
+    border-color: #212529;
+    color: #212529;
+    font-weight: 600;
+    padding: 0.75rem 2.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+.btn-outline-dark:hover {
+    background-color: #212529;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.text-dark i { color: #212529; }
+
+.alert {
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.ratio iframe {
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px) {
+    .display-4 { font-size: 2.5rem; }
+    .py-md-7 { padding: 3rem 0 !important; }
+}

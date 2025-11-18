@@ -1,0 +1,65 @@
+
+body {
+    background-color: #f8f9fa !important;
+    color: #212529;
+}
+
+/* Section spacing */
+.py-5 { padding: 3rem 0 !important; }
+.bg-white { background-color: #ffffff !important; }
+
+/* Card hover effect nhẹ */
+.card {
+    transition: all 0.3s ease;
+    border: none !important;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+}
+
+/* Team image border */
+.rounded-circle {
+    border: 4px solid #212529 !important;
+    transition: border 0.3s ease;
+}
+.rounded-circle:hover {
+    border-color: #495057 !important;
+}
+
+/* Buttons */
+.btn-outline-dark {
+    border-color: #212529;
+    color: #212529;
+    font-weight: 600;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+.btn-outline-dark:hover {
+    background-color: #212529;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+}
+.btn-outline-light:hover {
+    background-color: white;
+    color: #212529;
+}
+
+/* Icons */
+.text-dark i { color: #212529; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .display-4 { font-size: 2.5rem; }
+    .display-5 { font-size: 2rem; }
+    .py-5 { padding: 2rem 0 !important; }
+}
