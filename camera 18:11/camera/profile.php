@@ -443,11 +443,7 @@ $isEditing = isset($_GET['edit']);
                                         <div class="stat-value"><?= $stats['pending_orders'] ?></div>
                                         <div class="stat-label">Đơn đang xử lý</div>
                                     </div>
-                                    <div class="stat-card info">
-                                        <div class="stat-value"><?= $stats['wishlist_count'] ?></div>
-                                        <div class="stat-label">Sản phẩm yêu thích</div>
-                                    </div>
-                                </div>
+                                   
 
                                 <!-- Recent Orders -->
                                 <h5 class="mb-3"><i class="fas fa-clock me-2"></i>Đơn hàng gần đây</h5>
